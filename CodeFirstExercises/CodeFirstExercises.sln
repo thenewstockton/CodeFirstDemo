@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstExercises", "CodeFirstExercises\CodeFirstExercises.csproj", "{AF5C43B7-87BF-4D09-B579-FB0F693C85AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF5C43B7-87BF-4D09-B579-FB0F693C85AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5C43B7-87BF-4D09-B579-FB0F693C85AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5C43B7-87BF-4D09-B579-FB0F693C85AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5C43B7-87BF-4D09-B579-FB0F693C85AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
