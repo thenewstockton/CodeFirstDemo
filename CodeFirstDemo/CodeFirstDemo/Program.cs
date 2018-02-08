@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -12,24 +13,24 @@ namespace CodeFirstDemo
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public CourseLevel Level { get; set; }
+        public int Level { get; set; }
         public float FullPrice { get; set; }
         public Author Author { get; set; }
-        public IList<Tag> Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
     }
 
     public class Author
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<Course> Courses { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 
     public class Tag
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<Course> Courses { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 
     public enum CourseLevel
@@ -48,6 +49,13 @@ namespace CodeFirstDemo
         public PlutoContext() : base("name=DefaultConnection")
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<Course>().Property(t => t.Description)
+            //    .IsRequired();
         }
     }
 

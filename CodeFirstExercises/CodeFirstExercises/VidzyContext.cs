@@ -13,9 +13,15 @@ namespace CodeFirstExercises
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Video> Videos { get; set; }
 
-        public VidzyContext()
-            : base("name=DefaultConnection")
+        public VidzyContext() : base("name=DefaultConnection")
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Video>().Property(v => v.Name).IsRequired().HasMaxLength(255);
+            
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
